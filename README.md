@@ -12,4 +12,9 @@ Este site contiene un conjunto de misiones para probar tus habilidades en fronte
 - Trata de que tu solución sea fácilmente entendible por otros.
 - La solución debe verse bien en navegadores modernos, como las versiones más recientes de Chrome y Firefox.
 
+##Para participar
+
+- Forkea la rama master del proyecto, clónala en tu máquina, y pushea tus soluciones.
+- Si no usas git, descarga el zip, descomprímelo en tu máquina, y publica tu solución en algún hosting.
+
 Gracias por tu atención y ¡buena suerte!
