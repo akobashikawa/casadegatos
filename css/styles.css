@@ -1,0 +1,231 @@
+/* line 1, styles.scss */
+body {
+  position: relative;
+  font-family: 'Droid Serif', serif;
+  background-color: #333; }
+
+/* line 6, styles.scss */
+.navbar-collapse {
+  padding-right: 0;
+  padding-left: 0; }
+
+/* line 10, styles.scss */
+.navbar-default {
+  background-color: transparent;
+  border: none; }
+  /* line 13, styles.scss */
+  .navbar-default .navbar-toggle {
+    border-color: #000; }
+    /* line 15, styles.scss */
+    .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+      background-color: rgba(255, 255, 255, 0.5); }
+    /* line 18, styles.scss */
+    .navbar-default .navbar-toggle .icon-bar {
+      background-color: #000; }
+  /* line 22, styles.scss */
+  .navbar-default .navbar-nav {
+    position: relative;
+    margin: 0;
+    background-color: #c89; }
+    /* line 27, styles.scss */
+    .navbar-default .navbar-nav li a {
+      color: #fff !important;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+    /* line 31, styles.scss */
+    .navbar-default .navbar-nav li.active a {
+      background-color: #000;
+      color: #fff; }
+    /* line 35, styles.scss */
+    .navbar-default .navbar-nav li.active a:hover,
+    .navbar-default .navbar-nav li a:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff; }
+
+/* line 43, styles.scss */
+.navbar-brand {
+  position: relative;
+  font-size: 30px;
+  color: #000 !important;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  transition: all 0.4s; }
+  /* line 49, styles.scss */
+  .navbar-brand:hover {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.9); }
+
+/* line 53, styles.scss */
+.logo {
+  font-family: 'Henny Penny', cursive; }
+
+/* line 56, styles.scss */
+.sky {
+  width: 100%;
+  height: 50px;
+  background-color: #5af;
+  position: absolute;
+  top: 0; }
+
+/* line 63, styles.scss */
+.roof {
+  height: 0;
+  background-color: #fff; }
+  /* line 66, styles.scss */
+  .roof .tile {
+    background-color: #fc8;
+    width: 4%;
+    float: left;
+    text-align: center; }
+  /* line 72, styles.scss */
+  .roof.roof-shadow {
+    margin-top: 0; }
+    /* line 74, styles.scss */
+    .roof.roof-shadow .tile {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-bottom: none;
+      box-shadow: none; }
+
+/* line 82, styles.scss */
+main {
+  background-color: #fff;
+  padding-top: 50px; }
+  /* line 87, styles.scss */
+  main .content {
+    margin: 0 auto;
+    max-width: 960px; }
+
+/* line 93, styles.scss */
+.ask > .description {
+  margin: 10px 20px 40px 20px;
+  background-color: #eef;
+  padding: 10px 20px 20px;
+  font-size: 16px; }
+  /* line 98, styles.scss */
+  .ask > .description h1, .ask > .description h2 {
+    font-family: 'Mystery Quest', cursive; }
+  /* line 101, styles.scss */
+  .ask > .description h1 {
+    font-size: 36px; }
+  /* line 104, styles.scss */
+  .ask > .description h2 {
+    font-size: 32px; }
+  /* line 107, styles.scss */
+  .ask > .description .image {
+    width: 100%;
+    max-width: 400px; }
+    /* line 110, styles.scss */
+    .ask > .description .image img {
+      width: 100%;
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5); }
+  /* line 115, styles.scss */
+  .ask > .description figure {
+    width: 100%;
+    max-width: 400px; }
+    /* line 118, styles.scss */
+    .ask > .description figure img {
+      width: 100%; }
+    /* line 122, styles.scss */
+    .ask > .description figure figcaption {
+      background-color: rgba(0, 0, 0, 0.2);
+      text-align: center;
+      color: #eee;
+      position: relative;
+      height: 20px;
+      line-height: 20px;
+      top: -20px; }
+
+/* line 134, styles.scss */
+.ask {
+  border: 1px dashed lime; }
+  /* line 137, styles.scss */
+  .ask:nth-child(2n) .description {
+    background-color: #ded;
+    background-color: #eef; }
+
+/* line 149, styles.scss */
+.window {
+  position: relative;
+  width: 200px;
+  border: 1px dashed cyan; }
+  /* line 155, styles.scss */
+  .window .image {
+    background-color: #ffe2bb;
+    text-align: center;
+    padding: 10px 0; }
+    /* line 159, styles.scss */
+    .window .image img {
+      width: 80%;
+      display: inline-block; }
+
+@media screen and (min-width: 768px) {
+  /* line 178, styles.scss */
+  .window {
+    margin-left: 20px; }
+
+  /* line 181, styles.scss */
+  .ask > .description {
+    margin-top: 30px;
+    margin-left: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    width: calc(100% - 280px); }
+
+  /* line 190, styles.scss */
+  .row:nth-child(2n) .window {
+    margin-left: 0;
+    margin-right: 20px; }
+  /* line 194, styles.scss */
+  .row:nth-child(2n) .ask > .description {
+    margin-left: 20px;
+    margin-right: 40px; } }
+/* line 206, styles.scss */
+.courtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 233px;
+  cursor: pointer; }
+  /* line 213, styles.scss */
+  .courtain .slide {
+    height: 23px;
+    background-color: rgba(255, 240, 150, 0.8);
+    box-shadow: inset 0 0 10px 1px rgba(30, 0, 0, 0.3); }
+
+/* line 219, styles.scss */
+.board {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto; }
+  /* line 223, styles.scss */
+  .board .square {
+    width: 37.5px;
+    height: 37.5px;
+    background-color: #fff;
+    float: left; }
+    /* line 228, styles.scss */
+    .board .square:nth-child(2n) {
+      background-color: #000; }
+
+/* line 234, styles.scss */
+.weather-btn:focus {
+  outline: none; }
+
+@-webkit-keyframes rotating {
+  /* line 245, styles.scss */
+  from {
+    -webkit-transform: rotate(0deg); }
+
+  /* line 248, styles.scss */
+  to {
+    -webkit-transform: rotate(360deg); } }
+/* line 253, styles.scss */
+footer {
+  background-color: #070;
+  color: #ccc; }
+  /* line 258, styles.scss */
+  footer a:hover {
+    color: #fff; }
+  /* line 262, styles.scss */
+  footer .sign {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 40px 0; }
