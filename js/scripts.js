@@ -2,7 +2,18 @@
 
     // ask-courtain
     $('.ask-courtain .courtain').on('click', function() {
-        //...
+        var $this = $(this),
+            action = $this.data('action'),
+            alto = -($this.height()-50);
+
+        if (action === 'down') {
+            alto = 0;
+            $this.data('action', 'up');
+        } else {
+            $this.data('action', 'down');
+        }
+
+        $this.animate({top: alto+'px'}, 'fast');
     });
 
     // ask-weather

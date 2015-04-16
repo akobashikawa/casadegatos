@@ -71,9 +71,14 @@ body {
   /* line 66, styles.scss */
   .roof .tile {
     background-color: #fc8;
-    width: 4%;
+    border-bottom: 4px solid #C89;
+    border-radius: 0 0 50% 50%;
+    box-shadow: 0 1px 5px #333;
     float: left;
-    text-align: center; }
+    text-align: center;
+    text-indent: -9999px;
+    width: 4%;
+  }
   /* line 72, styles.scss */
   .roof.roof-shadow {
     margin-top: 0; }
@@ -149,11 +154,29 @@ main {
   .window .image {
     background-color: #ffe2bb;
     text-align: center;
-    padding: 10px 0; }
+    padding: 10px 0;
+    overflow: hidden;
+    position: relative;}
     /* line 159, styles.scss */
     .window .image img {
       width: 80%;
       display: inline-block; }
+
+.window-arc {
+  border-radius: 48% 48% 0 0;}
+  .window-arc .image {
+      border-radius: inherit;}
+      .window-arc img {
+        border-radius: inherit;
+      }
+
+.window-circle {
+  border-radius: 50%;}
+  .window-circle .image {
+      border-radius: inherit;}
+      .window-circle img {
+        border-radius: inherit;
+      }
 
 @media screen and (min-width: 768px) {
   /* line 178, styles.scss */
