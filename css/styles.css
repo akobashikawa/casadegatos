@@ -102,7 +102,8 @@ main {
   margin: 10px 20px 40px 20px;
   background-color: #eef;
   padding: 10px 20px 20px;
-  font-size: 16px; }
+  font-size: 16px;
+  float: left; }
   /* line 98, styles.scss */
   .ask > .description h1, .ask > .description h2 {
     font-family: 'Mystery Quest', cursive; }
@@ -145,6 +146,8 @@ main {
     background-color: #ded;
     background-color: #eef; }
 
+.ask:nth-child(7) .window{ float: left}
+
 /* line 149, styles.scss */
 .window {
   position: relative;
@@ -163,7 +166,8 @@ main {
       display: inline-block; }
 
 .window-arc {
-  border-radius: 48% 48% 0 0;}
+  border-radius: 48% 48% 0 0;
+  float: left;}
   .window-arc .image {
       border-radius: inherit;}
       .window-arc img {
@@ -171,12 +175,31 @@ main {
       }
 
 .window-circle {
-  border-radius: 50%;}
+  border-radius: 50%;
+  float: left;}
   .window-circle .image {
       border-radius: inherit;}
       .window-circle img {
         border-radius: inherit;
       }
+
+.window-square {
+  float: right;
+}
+.ask-intruder {
+  position: relative;
+}
+.ask-intruder .window-arc img {
+  visibility: hidden;
+}
+.ask-intruder .description img {
+  position: absolute;
+  width: 158px !important;
+  left: 41px;
+  top: 13px;
+  z-index: 1;
+  border-radius: 48% 48% 0 0;
+}
 
 @media screen and (min-width: 768px) {
   /* line 178, styles.scss */
@@ -195,11 +218,63 @@ main {
   /* line 190, styles.scss */
   .row:nth-child(2n) .window {
     margin-left: 0;
-    margin-right: 20px; }
+    margin-right: 20px; 
+    float: right;}
   /* line 194, styles.scss */
   .row:nth-child(2n) .ask > .description {
     margin-left: 20px;
     margin-right: 40px; } }
+
+@media screen and (max-width: 767px) {
+  .window-arc, .window-square, .window-circle, .ask:nth-child(7) .window {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ask > .description {
+    float: none;
+  }
+}
+@media screen and (min-width: 320px) {
+  .ask-intruder .description img {
+    left: 25%;
+  }
+}
+@media screen and (min-width: 350px) {
+  .ask-intruder .description img {
+    left: 27%;
+  }
+}
+@media screen and (min-width: 370px) {
+  .ask-intruder .description img {
+    left: 29%;
+  }
+}
+@media screen and (min-width: 390px) {
+  .ask-intruder .description img {
+    left: 31%;
+  }
+}
+@media screen and (min-width: 420px) {
+  .ask-intruder .description img {
+    left: 33%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .ask-intruder .description img {
+    left: 35%;
+  }
+}
+@media screen and (min-width: 580px) {
+  .ask-intruder .description img {
+    left: 37%;
+  }
+}
+@media screen and (min-width: 670px) {
+  .ask-intruder .description img {
+    left: 39%;
+  }
+}
 /* line 206, styles.scss */
 .courtain {
   position: absolute;
