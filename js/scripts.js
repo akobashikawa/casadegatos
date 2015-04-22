@@ -2,7 +2,18 @@
 
     // ask-courtain
     $('.ask-courtain .courtain').on('click', function() {
-        //...
+        var $this = $(this),
+            action = $this.data('action'),
+            alto = -($this.height()-50);
+
+        if (action === 'down') {
+            alto = 0;
+            $this.data('action', 'up');
+        } else {
+            $this.data('action', 'down');
+        }
+
+        $this.animate({top: alto+'px'}, 'fast');
     });
 
     // ask-weather
@@ -56,19 +67,22 @@ Para más información: http://openweathermap.org/weather-data#current
 */
     $('.weather-btn').on('click', function() {
         $btn = $(this);
-        $btn.addClass('active');
+        $btn.addClass('active').prop('disabled', true);
 
-        var url;
+        var url = 'http://api.openweathermap.org/data/2.5/weather?q=Lima,PE';
 
         $.ajax({
             url: url,
             method: 'get',
             dataType: 'json'
         }).done(function(data) {
-            $btn.removeClass('active');
-            //...
+            var $weather = $('.weather-box');
+            $weather.children('.city').children('.value').text(data.name);
+            $weather.children('.temp').children('.value').text(data.main.temp);
+            $weather.children('.humidity').children('.value').text(data.main.humidity);
+            $weather.children('.description').children('.value').text(data.weather[0].description);
+            $btn.removeClass('active').prop('disabled', false);
         });
-
     }).click();
 
 })(jQuery);
