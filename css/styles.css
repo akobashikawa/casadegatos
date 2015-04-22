@@ -195,46 +195,11 @@ main {
 .ask-intruder .description img {
   position: absolute;
   width: 158px !important;
-  left: 41px;
   top: 13px;
   z-index: 1;
   border-radius: 48% 48% 0 0;
 }
 
-@media screen and (min-width: 768px) {
-  /* line 178, styles.scss */
-  .window {
-    margin-left: 20px; }
-
-  /* line 181, styles.scss */
-  .ask > .description {
-    margin-top: 30px;
-    margin-left: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px;
-    width: calc(100% - 280px); }
-
-  /* line 190, styles.scss */
-  .row:nth-child(2n) .window {
-    margin-left: 0;
-    margin-right: 20px; 
-    float: right;}
-  /* line 194, styles.scss */
-  .row:nth-child(2n) .ask > .description {
-    margin-left: 20px;
-    margin-right: 40px; } }
-
-@media screen and (max-width: 767px) {
-  .window-arc, .window-square, .window-circle, .ask:nth-child(7) .window {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .ask > .description {
-    float: none;
-  }
-}
 @media screen and (min-width: 320px) {
   .ask-intruder .description img {
     left: 25%;
@@ -273,6 +238,45 @@ main {
 @media screen and (min-width: 670px) {
   .ask-intruder .description img {
     left: 39%;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 178, styles.scss */
+  .window {
+    margin-left: 20px; }
+
+  /* line 181, styles.scss */
+  .ask > .description {
+    margin-top: 30px;
+    margin-left: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    width: calc(100% - 280px); }
+
+  /* line 190, styles.scss */
+  .row:nth-child(2n) .window {
+    margin-left: 0;
+    margin-right: 20px; 
+    float: right;}
+  /* line 194, styles.scss */
+  .row:nth-child(2n) .ask > .description {
+    margin-left: 20px;
+    margin-right: 40px; }
+
+    .ask-intruder .description img {
+    left: 41px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .window-arc, .window-square, .window-circle, .ask:nth-child(7) .window {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ask > .description {
+    float: none;
   }
 }
 /* line 206, styles.scss */
